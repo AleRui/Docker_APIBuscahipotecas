@@ -1,0 +1,6 @@
+.env
+.dockerignore
+.vscode
+/app/.idea
+/app/.vscode
+/app/ChatGPT_ask.md
