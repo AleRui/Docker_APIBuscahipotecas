@@ -1,0 +1,18 @@
+services:
+  springboot-app:
+    build: .
+    container_name: springboot-app
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    environment:
+      - DB_HOST=host.docker.internal # nombre del servicio MySQL en docker-compose
+      - DB_PORT=3306
+      - DB_NAME=bh
+      - DB_USER=user_buscahipotecas
+      - DB_PASS=pass_buscahipotecas@0
+
+networks:
+  app-network:
+    driver: bridge
